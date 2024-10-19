@@ -1,0 +1,117 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Website with Buttons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            background-color: #1a73e8;
+            color: white;
+            border: 3px solid slateblue;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #d93025;
+        }
+        h1{
+            background-color: salmon;
+            color:white;
+        }
+        p{
+            background-color: purple;
+            font-size: x-large;
+            color: white;
+        }
+    </style> -->
+<!-- </head>
+<body>
+    <h1>Welcome to My Simple Website</h1>
+    <p>Click the buttons below to visit:</p>
+
+    Buttons to link to websites -->
+    <button onclick="window.open('https://www.google.com', '_blank')">Google</button><br>
+    <button onclick="window.open('https://www.facebook.com', '_blank')">Facebook</button><br>
+    <button onclick="window.open('https://www.twitter.com', '_blank')">Twitter</button><br>
+    <button onclick="window.open('https://www.YouTube.com', '_blank')">YouTube</button>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Website with Clock</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #d93025;
+        }
+        #clock {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Simple Website</h1>
+    <p>Click the buttons below to visit:</p>
+
+    <!-- Buttons to link to websites -->
+    <button onclick="window.open('https://www.google.com', '_blank')">Google</button><br>
+    <button onclick="window.open('https://www.facebook.com', '_blank')">Facebook</button><br>
+    <button onclick="window.open('https://www.twitter.com', '_blank')">Twitter</button><br>
+    <button onclick="window.open('https://www.youtube.com', '_blank')">YouTube</button>
+
+    <!-- Display clock -->
+    <div id="clock"></div>
+
+    <script>
+        function updateClock() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+
+            // Add leading zero to minutes and seconds if they are less than 10
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+
+            var timeString = hours + ':' + minutes + ':' + seconds;
+
+            document.getElementById('clock').textContent = timeString;
+        }
+
+        // Update the clock every second
+        setInterval(updateClock, 1000);
+        // Call the function once so the clock displays immediately
+        updateClock();
+    </script>
+</body>
+</html>
